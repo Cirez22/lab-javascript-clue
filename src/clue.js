@@ -113,7 +113,12 @@ console.log(selectRandom(weaponsArray));
 }
 
 function pickMystery() {
-
+  let object = {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray)
+  };
+  return object;
 
 
 }
@@ -121,7 +126,14 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery() {
+  let mistery = generatedRandObj();
+  console.log(`
+    ${mistery.suspect.firstName} ${mistery.suspect.lastName} killed Mr. Boddy with the
+    ${mistery.weapon.name} in the ${mistery.room.name}
+  `)
+
+}
 
 
 
